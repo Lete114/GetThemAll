@@ -6,10 +6,10 @@
 
 ## 屏幕截图
 
-汉化前
+### 汉化前
 ![Js4U7q.png](https://s1.ax1x.com/2020/04/25/Js4U7q.png)
 
-汉化后
+### 汉化后
 ![Js4dA0.png](https://s1.ax1x.com/2020/04/25/Js4dA0.png)
 
 ## 注意
