@@ -1,0 +1,134 @@
+{
+   "appDesc": {
+      "message": "下载视频, pdf 文件, html 文件, 图片. 使用内置的过滤器分析网页。"
+   },
+   "appName": {
+      "message": "视频下载器GetThemAll"
+   },
+   "button_download": {
+      "message": "下载"
+   },
+   "options_about": {
+      "message": "关于我们"
+   },
+   "options_apply_changes": {
+      "message": "应用更改"
+   },
+   "options_close": {
+      "message": "关闭"
+   },
+   "options_facebook": {
+      "message": "显示facebook.com下载按钮"
+   },
+   "options_filename": {
+      "message": "下载原始文件名"
+   },
+   "options_general": {
+      "message": "选择"
+   },
+   "options_save": {
+      "message": "显示保存为文本"
+   },
+   "options_scale": {
+      "message": "扩展插件"
+   },
+   "options_title": {
+      "message": "获取所有设置"
+   },
+   "options_vk": {
+      "message": "显示下载按钮"
+   },
+   "popup_clear_all": {
+      "message": "全部清除"
+   },
+   "popup_download": {
+      "message": "下载"
+   },
+   "popup_download_warning_1": {
+      "message": "重要内容,请阅读!"
+   },
+   "popup_download_warning_2": {
+      "message": "当下载多个文件时，许多保存为对话框的文件可能会弹出。"
+   },
+   "popup_download_warning_3": {
+      "message": "1. 点击总是允许按钮。否则，您将无法再次从当前网站下载多个文件!"
+   },
+   "popup_download_warning_4": {
+      "message": "2. 观看短视频如何修复多个对话框弹出。"
+   },
+   "popup_download_warning_5": {
+      "message": "知道了!不再显示这个消息!"
+   },
+   "popup_download_zip": {
+      "message": "下载为ZIP"
+   },
+   "popup_downloader_desc": {
+      "message": "描述"
+   },
+   "popup_downloader_size": {
+      "message": "大小"
+   },
+   "popup_downloader_url": {
+      "message": "网址"
+   },
+   "popup_filter_mask": {
+      "message": "模糊查询:"
+   },
+   "popup_noyoutube_message_1": {
+      "message": "由于YouTube政策。不允许从YouTube下载。"
+   },
+   "popup_noyoutube_message_2": {
+      "message": "请不要发表负面评论。这不是我们的错。"
+   },
+   "popup_noyoutube_message_3": {
+      "message": "希望你能理解。谢谢!"
+   },
+   "popup_rate_button": {
+      "message": "评价我们!"
+   },
+   "popup_rate_text": {
+      "message": "如果你喜欢我们的产品，请评价我们的产品。"
+   },
+   "popup_reload_message": {
+      "message": "在下载之前，您需要刷新此页面"
+   },
+   "popup_save_link": {
+      "message": "保存链接到txt"
+   },
+   "popup_select_all": {
+      "message": "全选"
+   },
+   "popup_show_filter": {
+      "message": " 显示过滤 / 隐藏过滤 "
+   },
+   "popup_show_more": {
+      "message": "显示更多"
+   },
+   "popup_show_previews": {
+      "message": "显示预览"
+   },
+   "popup_show_title": {
+      "message": "显示:"
+   },
+   "popup_tab_detected": {
+      "message": "识别"
+   },
+   "popup_tab_name_docs": {
+      "message": "文档/文件"
+   },
+   "popup_tab_name_images": {
+      "message": "图片"
+   },
+   "popup_tab_name_links": {
+      "message": "链接"
+   },
+   "popup_tab_name_settings": {
+      "message": "设置"
+   },
+   "popup_tab_name_video": {
+      "message": "视频/音频"
+   },
+   "popup_tab_not_detected": {
+      "message": "未识别"
+   }
+}
