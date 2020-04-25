@@ -1,33 +1,19 @@
-# Get Them All
+# Get Them All [资源来自Co2333](https://github.com/Co2333/GetThemAll)
 
-## What is this
+## 描述
 
-This is a Chrome Extension to download all elements on website supporting not only mp3, mp4, mov, gif, png but also m3u8 and a lot.
+这是一个Chrome扩展下载网站上的所有元素，它不仅支持mp3、mp4、mov、gif、png、还支持m3u8和很多图片、视频文件格式。
 
-## Screenshot
+## 屏幕截图
 
-![Screenshot](./screenshot.png)
+汉化前
+![Js4U7q.png](https://s1.ax1x.com/2020/04/25/Js4U7q.png)
 
-## What to notice
+汉化后
+![Js4dA0.png](https://s1.ax1x.com/2020/04/25/Js4dA0.png)
 
-I DO NOT CONFIRM THIS COPY IS SAFE
+## 注意
 
-I been using this copy for 3 years or so. It should be safe but I DO_NOT promise you that. You can take over this copy and rewrite it if you like to. PRs are welcome.
+我不能确定这个插件是安全的，但这款插件是对我有帮助的
 
-## Why is this
-
-This is a copy of GetThemAll from Google Chrome Extension Store.
-
-I saved this copy as an accident. That day I was backing up my Chrome Extension localy to my hard drive and some weeks later,  I noticed this lovely extension was away from my Chrome.
-
-Here is a backup I looked it up for 30 min in my backups.
-
-## What about the license
-
-Clearly, I dont have any license of this extension. If anything goes wrong, contact me in the issue and I will follow up asap.
-
-## A little bit more
-
-I have modified the manifest.json due some **Chrome Jobs** The Chome will not enable this if I dont do or simply delete it like the same way last time I lost it.
-
-Enjoy - Lakr Aream - 2020 04 23
+声明：很明显我是没有许可的，那我为什么会把他发布出来呢？<br>因为这款插件对我有帮助，但我英语水平不是很好.<br>于是我就把它汉化了，并把其他语言文件删了，以节约C盘内存空间 <br>**(因为Google Chrome默认默认是安装在C盘的，我习惯把相关的文件放到软件的根目录下)**<br>官网似乎是[http://getthemall.org/](http://getthemall.org/)但貌似已经停止运营了<br>**如有侵权，请及时联系删除**lete0419@qq.com
