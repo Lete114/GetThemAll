@@ -775,12 +775,12 @@ body  {
 .gta_downloader_zip   {
 	position:absolute; 
 	right:250px; 
-	top:10px;
+	top:-15px;
 }
 .gta_downloader_savelink   {
-	position:absolute; 
-	right:200px; 
-	top:0px;
+	position:absolute;
+	right: 250px;
+	top: 0px;
 }
 .gta_downloader_savelink   .title_button {
 	cursor: pointer;
@@ -1226,3 +1226,13 @@ div.download_icon .info_size[loading="1"]
 }
 
 
+
+
+
+/*Lete 乐特*/
+.lete{
+
+	margin-top: -37px;
+	margin-left: 330px;
+	color: red;
+}

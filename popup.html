@@ -7,7 +7,7 @@
 	<meta http-equiv="content-language" content="zh-CN">
 	<meta property="og:locale" content="zh-CN">
 
-
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/popup/namespace.js"></script>
 
 	<script type="text/javascript" src="/js/background/Media.js"></script>
@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="/js/popup.js"></script>
 	<script type="text/javascript" src="/js/locale.js"></script>
 	<script type="text/javascript" src="/js/ad.js"></script>
+	<script type="text/javascript" src="js/Lete.js"></script>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -30,15 +31,17 @@
 
 </head>
 <body>
-<div id="GtaSuggestionMessage" hidden="true">
-	<div class="text" msg="popup_rate_text"></div>
-	<img src="/images/star.png" class="rate_star"/>
-	<img src="/images/star.png" class="rate_star"/>
-	<img src="/images/star.png" class="rate_star"/>
-	<img src="/images/star.png" class="rate_star"/>
-	<img src="/images/star.png" class="rate_star"/>
-	<a class="button"><span class="text" msg="popup_rate_button"></span></a>
-</div>
+<!-- 由于官方已经停止更新，留着这个也会影响体验(注释)
+	<div id="GtaSuggestionMessage" hidden="true">
+		<div class="text" msg="popup_rate_text"></div>
+		<img src="/images/star.png" class="rate_star"/>
+		<img src="/images/star.png" class="rate_star"/>
+		<img src="/images/star.png" class="rate_star"/>
+		<img src="/images/star.png" class="rate_star"/>
+		<img src="/images/star.png" class="rate_star"/>
+		<a class="button"><span class="text" msg="popup_rate_button"></span></a>
+	</div>
+-->
 
 <!-- window -->
 <div class="gta_downloader_global gta_downloader_window">
@@ -135,8 +138,8 @@
 			<div class="gta_downloader_header">
 				<div class="gta_downloader_header_wrapper gta_downloader_clearfix">
 					<div class="gta_downloader_name" id="head_all_sel"  check="0">
-						<label class="gta_downloader_select_all">
-							<span class="gta_downloader_noselect" msg="popup_select_all"></span>
+						<label class="gta_downloader_select_all" >
+							<span class="gta_downloader_noselect" id="lete"  msg="popup_select_all"></span>
 						</label>
 					</div>
 					<div class="gta_downloader_url"    id="head_url" msg="popup_downloader_url"></div>
@@ -327,82 +330,88 @@
 								</span>
 									<span msg="popup_download_zip"></span>
 								</label>
+
 							</div>
-							<button class="gta_downloader_button gta_downloader_savelink" type="submit" disabled="true" id="savelinkButton">
-								<span class="title_button" msg="popup_save_link"></span>
+
+						<button class="gta_downloader_button gta_downloader_savelink" type="submit" disabled="true" id="savelinkButton">
+							<span class="title_button" msg="popup_save_link"></span>
+						</button>
+<span class="lete" style="display: none">(这里有个BUG，选择zip格式下载，结果确是txt格式)<br>
+							                 (下载后需手动更改后缀名，把txt改成zip)<br>
+											(我尝试修改代码，但我对前端不是太了解，能力有限)<br>
+											(如有前端大佬，麻烦看看是哪有问题)</span>
+						<div class="gta_downloader_submit">
+							<button class="gta_downloader_button gta_downloader_button_big" type="submit" disabled id="downButton">
+								<span class="title_button" msg="popup_download"></span>
+								<span id="total_count" class="total_count">(0)</span>
 							</button>
-							<div class="gta_downloader_submit">
-								<button class="gta_downloader_button gta_downloader_button_big" type="submit" disabled id="downButton">
-									<span class="title_button" msg="popup_download"></span>
-									<span id="total_count" class="total_count">(0)</span>
-								</button>
-							</div>
 						</div>
 					</div>
-					<!-- /footer -->
-				</div>		<!-- masterFooter -->
-
-			</div>		<!-- masterMain -->
-			<!-- /container -->
-
-			<div class="main" id="downloadBox">
-				<div class="downloadBox_body">
-					<div class="downloadBox_message" style="margin-top: 10px"><span msg="popup_download_warning_1"></span></div>
-					<div class="downloadBox_message"><span style="color:red" msg="popup_download_warning_2"></span></div>
-
-					<div class="downloadBox_text1">
-						<span msg="popup_download_warning_3"></span>
-					</div>
-					<div class="downloadBox_img1">
-						<img src="/images/allow_deny.png" >
-					</div>
-					<div class="downloadBox_text2">
-						<span msg="popup_download_warning_4"></span>
-					</div>
-					<div class="downloadBox_img2">
-						<a target="_blank" href="http://www.youtube.com/watch?v=A1sP-XUTZ0U&amp;feature=youtu.be"><img src="/images/video_help.png" ></a>
-					</div>
-
-					<div class="downloadBox_checkbox">
-						<input type="checkbox"  id="download_warning" />
-						<span id="downloadBox_label" msg="popup_download_warning_5"></span></div>
-
-					<div id="downloadBox_Button">
-						<button class="gta_downloader_button gta_downloader_button_big" type="submit" id="downBox_Button">
-							<span msg="popup_download"></span>
-						</button>
-					</div>
-
 				</div>
-			</div>
+				<!-- /footer -->
+			</div>		<!-- masterFooter -->
 
-			<div id="messageBox" class="gta_downloader_message_noyoutube" hidden="true">
-				<div class="message_body">
-					<div class="message">
-						<span msg="popup_noyoutube_message_1"></span><br>
-						<span msg="popup_noyoutube_message_2"></span><br>
-						<span msg="popup_noyoutube_message_3"></span>
-					</div>
+		</div>		<!-- masterMain -->
+		<!-- /container -->
+
+		<div class="main" id="downloadBox">
+			<div class="downloadBox_body">
+				<div class="downloadBox_message" style="margin-top: 10px"><span msg="popup_download_warning_1"></span></div>
+				<div class="downloadBox_message"><span style="color:red" msg="popup_download_warning_2"></span></div>
+
+				<div class="downloadBox_text1">
+					<span msg="popup_download_warning_3"></span>
 				</div>
-			</div>
-
-			<div id="messageBoxReload" class="gta_downloader_message_reload" hidden="true">
-				<div class="message_body">
-					<div class="message">
-						<span msg="popup_reload_message"></span><br>
-					</div>
+				<div class="downloadBox_img1">
+					<img src="/images/allow_deny.png" >
 				</div>
-			</div>
+				<div class="downloadBox_text2">
+					<span msg="popup_download_warning_4"></span>
+				</div>
+				<div class="downloadBox_img2">
+					<a target="_blank" href="http://www.youtube.com/watch?v=A1sP-XUTZ0U&amp;feature=youtu.be"><img src="/images/video_help.png" ></a>
+				</div>
 
+				<div class="downloadBox_checkbox">
+					<input type="checkbox"  id="download_warning" />
+					<span id="downloadBox_label" msg="popup_download_warning_5"></span></div>
+
+				<div id="downloadBox_Button">
+					<button class="gta_downloader_button gta_downloader_button_big" type="submit" id="downBox_Button">
+						<span msg="popup_download"></span>
+					</button>
+				</div>
+
+			</div>
 		</div>
-	</div>
 
-	<!-- /window -->
-	<div id="image-tooltip" style="top: 100px; left: 100px; ">
-		<div id="rg3fbpz-title" loading="1">
-			<img id="preview-image" src="" style="position: relative; z-index: 2; width: auto; min-height: 50px; max-height: 250px;" title="" loaded="loaded">
+		<div id="messageBox" class="gta_downloader_message_noyoutube" hidden="true">
+			<div class="message_body">
+				<div class="message">
+					<span msg="popup_noyoutube_message_1"></span><br>
+					<span msg="popup_noyoutube_message_2"></span><br>
+					<span msg="popup_noyoutube_message_3"></span>
+				</div>
+			</div>
 		</div>
+
+		<div id="messageBoxReload" class="gta_downloader_message_reload" hidden="true">
+			<div class="message_body">
+				<div class="message">
+					<span msg="popup_reload_message"></span><br>
+				</div>
+			</div>
+		</div>
+
 	</div>
+</div>
+
+<!-- /window -->
+<div id="image-tooltip" style="top: 100px; left: 100px; ">
+	<div id="rg3fbpz-title" loading="1">
+		<img id="preview-image" src="" style="position: relative; z-index: 2; width: auto; min-height: 50px; max-height: 250px;" title="" loaded="loaded">
+	</div>
+</div>
 
 </body>
 </html>
